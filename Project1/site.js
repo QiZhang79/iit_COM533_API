@@ -6,8 +6,12 @@ var user = {
   "created_at": "2016-08-24T05:08:13Z"
 }
 
-$('#content').append('<img src="' + user["avatar_url"] + '" />');
-$('#name').append('<a href="https://github.com/'+user["name"]+'">' + user["name"] + '</a>');
-$('#id').append(user["id"]);
-$('#location').append(user["location"]);
-$('#start').append(user["created_at"]);
+$('#result').hide();
+$('#button').on("click",function(e){
+	$('#result').show();
+	$('#result').append('<img src="' + user["avatar_url"] + '" />');
+	$('#name').append('<a href="https://github.com/'+user["name"]+'">' + user["name"] + '</a>');
+	$('#id').append(user["id"]);
+	$('#location').append(user["location"]);
+	$('#start').append(user["created_at"]);
+});
